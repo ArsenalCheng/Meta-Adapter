@@ -17,13 +17,26 @@ The Meta-Adapter, employing a meta-testing mechanism and a lightweight residual-
 3. torch>=2.0.0, cuda==11.8
 
 
+## Model Zoo
+----
+
+1. The pre-trained weights of Meta-Adapter on ImageNet based on RN50, RN101, ViT-B/16 and ViT-B/32 can be downloaded altogether via this [link](https://drive.google.com/drive/folders/1esyFhs4gj9cEZoFo6B45Mp3eMmsuxwW-?usp=drive_link). The weights can be used to reproduce the results in Table 3 of Meta-Adapter's paper.
+
+2. Quantitative results on other datasets are as follows:
+
+| Model          | SUN397 | UCF101 | Caltech101 | DTD | FGVCAircarft | EuroSAT | Oxford_Pets |
+|:----:          |:------:|:------:|:----------:|:---:|:------------:|:-------:|:-----------:|
+| Zero-Shot CLIP |  29.0  | 21.1   |   60.6     |10.0 |  0.4         | 4.2     |  84.0       |
+| Meta-Adapter   |  52.7  | 52.3   |   71.5     |49.2 |  19.6        | 66.7    |  87.0       |
+
+
 ## Getting Start
 ----
 
 ### Validate
 
 1. change `root_path` in `$DATA.yaml`, the default configurations are `shots=16` and `backbone=RN50`;
-2. run `python main.py --config ./configs/$DATA.yaml`
+2. run `python main.py --config ./configs/$DATA.yaml`;
 
 
 ## Ref
