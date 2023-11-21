@@ -1,0 +1,16 @@
+# ------ root_path/dataset_name ------
+root_path: ~
+
+
+# ------ Load Cache and Features ------
+load_cache: False
+load_pre_feat: False
+
+
+# ------ Basic Config ------
+dataset: 'dtd'
+shots: 16
+backbone: 'RN50'
+lr: 0.0001
+augment_epoch: 10
+train_epoch: 5
